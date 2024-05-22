@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "moduleResolution":"NodeNext",
+    "module": "NodeNext",
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+                              /* Specify what module code is generated. */
+  },
+  "include": ["src/**/*.ts","config/**/*.ts","app.ts","server.ts","seed.js"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "task-tribe-api",
+  "version": "1.0.0",
+  "description": "An api for task tribe",
+  "main": "src/server.ts",
+  "scripts": {
+    "start": "node dist/server.ts",
+    "dev": " nodemon  src/server.ts",
+    "build": "tsc -p ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^5.13.22"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^20.12.12",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^4.9.5"
+  }
+}
