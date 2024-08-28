@@ -1,15 +1,13 @@
 import express from 'express';
-import userRoutes from './routes/userRoutes';
-import teamRoutes from './routes/teamRoutes';
-import projectRoutes from './routes/projectRoutes';
-import taskRoutes from './routes/taskRoutes';
 import routes from './routes'
 import AppError from './utils/AppError';
 import errorHandler from './middlewares/errorHandler';
+import cors from 'cors'
 
 const app = express();
 
 // Middleware
+app.use(cors());
 app.use(express.json());
 
 // Routes

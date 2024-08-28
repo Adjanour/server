@@ -1,4 +1,4 @@
-import client from '../../config/db';
+import {client} from '../../config/db';
 import mongoose, { Schema, Document } from 'mongoose';
 
 export interface Status extends Document {

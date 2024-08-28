@@ -1,5 +1,5 @@
 import mongoose, { Schema, Document } from 'mongoose';
-import client from '../../config/db';
+import {client} from '../../config/db';
 
 export interface Task extends Document {
     projectId: mongoose.Types.ObjectId;
@@ -22,12 +22,14 @@ const TaskSchema: Schema = new Schema({
     createdBy: { type: Schema.Types.ObjectId, ref: 'User', required: true },
     assignedTo: { type: Schema.Types.ObjectId, ref: 'User' },
     createdAt: { type: Date, default: Date.now },
-    updatedAt: { type: Date, default: Date.now }
+    updatedAt: { type: Date, default: Date.now },
+});
+
+TaskSchema.pre<Task>('save', function (next) {
+    this.updatedAt = new Date();
+    next();
 });
 
 const TaskModel = client.model<Task>('Task', TaskSchema);
 
 export default TaskModel;
-
-
-
